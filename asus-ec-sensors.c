@@ -279,7 +279,7 @@ static const struct ec_sensor_info sensors_family_amd_600[] = {
 	[ec_sensor_temp_cpu_package] =
 		EC_SENSOR("CPU Package", hwmon_temp, 1, 0x00, 0x31),
 	[ec_sensor_temp_mb] =
-	EC_SENSOR("Motherboard", hwmon_temp, 1, 0x00, 0x32),
+		EC_SENSOR("Motherboard", hwmon_temp, 1, 0x00, 0x32),
 	[ec_sensor_temp_vrm] =
 		EC_SENSOR("VRM", hwmon_temp, 1, 0x00, 0x33),
 	[ec_sensor_temp_t_sensor] =
@@ -624,7 +624,7 @@ static const struct ec_board_info board_info_strix_b550_i_gaming = {
 static const struct ec_board_info board_info_strix_b650e_e_gaming = {
 	.sensors = SENSOR_TEMP_VRM | SENSOR_TEMP_T_SENSOR |
 		SENSOR_SET_TEMP_CHIPSET_CPU_MB | SENSOR_IN_CPU_CORE,
-	.mutex_path = ACPI_GLOBAL_LOCK_PSEUDO_PATH,
+	.mutex_path = ASUS_HW_ACCESS_MUTEX_SB_PCI0_SBRG_SIO1_MUT0,
 	.family = family_amd_600_series,
 };
 
