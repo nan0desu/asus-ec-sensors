@@ -622,8 +622,8 @@ static const struct ec_board_info board_info_strix_b550_i_gaming = {
 };
 
 static const struct ec_board_info board_info_strix_b650e_e_gaming = {
-	.sensors = SENSOR_TEMP_VRM | SENSOR_TEMP_T_SENSOR |
-		SENSOR_SET_TEMP_CHIPSET_CPU_MB | SENSOR_IN_CPU_CORE,
+	.sensors = SENSOR_TEMP_VRM | SENSOR_SET_TEMP_CHIPSET_CPU_MB |
+		SENSOR_IN_CPU_CORE,
 	.mutex_path = ASUS_HW_ACCESS_MUTEX_SB_PCI0_SBRG_SIO1_MUT0,
 	.family = family_amd_600_series,
 };
